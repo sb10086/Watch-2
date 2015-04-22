@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--剪刀石头布-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch2_WatchKit_App" customModuleProvider="target">
+                <controller title="剪刀石头布" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch2_WatchKit_App" customModuleProvider="target">
                     <items>
                         <imageView alignment="center" image="anime0" id="05k-4X-mok"/>
                         <button width="1" alignment="left" title="开始" id="HsX-u9-hZs">
