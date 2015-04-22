@@ -11,7 +11,24 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    @IBOutlet weak var imgAnime: WKInterfaceImage!
 
+    @IBAction func startGame() {
+        
+        imgAnime.setImageNamed("anime")
+        imgAnime.startAnimatingWithImagesInRange(NSMakeRange(0, 3), duration: 0.3, repeatCount: 3)
+
+        delay(0.9, closure: { () -> () in
+            var imageNumber = arc4random_uniform(3)
+            self.imgAnime.setImageNamed("anime\(imageNumber)")
+        })
+    }
+    
+    //指定等待时间
+    func delay(seconds: Double, closure:() -> () ) {
+       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
+    }
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
